@@ -1,30 +1,4 @@
-/*
-
-'use strict';
-
-angular.module('wilardApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize'
-])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
-  * 
-*/
-
-// below this is my code
-
-// var app = angular.module("app", ['ngSanitize']);
-
-var app = angular.module('wilardApp', [
+var app = angular.module('baseprojectApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -44,7 +18,7 @@ app.config(function($httpProvider) {
       if(response.status === 418) {
         SessionService.unset('authenticated');
         $location.path('/login');
-        // FlashService.show(response.data.flash);
+        FlashService.show(response.data.flash);
       }
       return $q.reject(response);
     };

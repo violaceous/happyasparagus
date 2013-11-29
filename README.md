@@ -1,4 +1,4 @@
-baseproject
+$2
 ===========
 
 Base project for angularjs and flask stack.

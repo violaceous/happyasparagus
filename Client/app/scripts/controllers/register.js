@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('wilardApp')
+angular.module('baseprojectApp')
 	.controller("RegisterController", function($scope, $location, RegisterService) {
 		$scope.user = { first: "", last: "", email: "", password: "" };
 

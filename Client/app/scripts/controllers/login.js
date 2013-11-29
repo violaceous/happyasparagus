@@ -1,4 +1,4 @@
-angular.module('wilardApp').controller("LoginController", function($scope, $location, AuthenticationService) {
+angular.module('baseprojectApp').controller("LoginController", function($scope, $location, AuthenticationService) {
 		'use strict';
 		$scope.credentials = { email: "", password: "" };
 		$scope.id = "";
