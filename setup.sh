@@ -9,7 +9,7 @@ grep -rl "baseproject" ./Client | xargs sed -i "s/baseproject/$1/g"
 grep -rl "dbpassword" ./Server | xargs sed -i "s/dbpassword/$2/g"
 
 mysql -u root -p $2 -e "CREATE DATABASE $1 /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE $2;
+USE $1;
 CREATE TABLE 'user'(
   'id' int(11) NOT NULL AUTO_INCREMENT,
   'first' varchar(45) DEFAULT NULL,
