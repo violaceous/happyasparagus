@@ -5,14 +5,30 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import "compass";
 
 /* Put your CSS here */
+$green: #858E4B;
+$green_muted: #666B45;
+$green_dark: #5C371A;
+$green_light: #BDC780;
+$green_lightest: #BDC780;
+$pink: #7F4359;
+$pink_muted: #5F3D4A;
+$pink_dark: #52162C;
+$pink_light: #BF7B94;
+$pink_lightest: #BF8DA0;
+$purple: #493963;
+$purple_muted: #3C334A;
+$purple_dark: #241241;
+$purple_light: #8E78B1;
+$purple_lightest: #9787B1;
+
 html, body {
   margin: 20px;
 }
 
 body {
-    background: #fafafa;
+    background: $green_lightest;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+    color: $purple_dark;
 }
 
 h1,h2,h3,h4,h5 {
@@ -21,28 +37,6 @@ h1,h2,h3,h4,h5 {
 
 button {
   margin-bottom: 0px !important;
-  background-color: #4512AE !important;
-  border-color: #7546D7 !important;
-}
-
-.books {
-  list-style-type: none;
-}
-
-
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-}
-
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+  background-color: $pink !important;
+  border-color: $pink_light !important;
 }

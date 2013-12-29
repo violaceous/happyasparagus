@@ -1,5 +1,5 @@
 {
-  "name": "baseproject",
+  "name": "happyasparagus",
   "version": "0.0.0",
   "dependencies": {
     "phantomjs": "~1.9.2-2"

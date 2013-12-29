@@ -1,4 +1,4 @@
-angular.module('baseprojectApp').controller("LoginController", function($scope, $location, AuthenticationService) {
+angular.module('happyasparagusApp').controller("LoginController", function($scope, $location, AuthenticationService) {
 		'use strict';
 		$scope.credentials = { email: "", password: "" };
 		$scope.id = "";

@@ -1,21 +1,27 @@
-angular.module('baseprojectApp').controller("HomeController", function($scope, $location, $http, AuthenticationService) {
-	'use strict';
-		$scope.credentials = { email: "", password: "" };
-		var movies;
-	//	$http.get("/api/recommendations/" + $scope.id);
-	
-		var onHomeSuccess = function(data, status, headers, config) {
-			FlashService.clear();
-			movies = data.movies;
-		};
+angular.module('happyasparagusApp').controller("HomeController", function($scope, $location, $http, AuthenticationService, UserService) {
+    'use strict';
+    $scope.credentials = { email: "", password: "" };
+    var purchases;
+    // $http.get("/api/purchases/" + $scope.id);
 
-		var onHomeError = function() {
-			alert('home error!');
-		};
-		
+    alert(UserService.getId);
+    var toPass = {
+	id: '1'
+    }
+    $http.post("/api/purchases", toPass);
 
-		$scope.logout = function() {
-			AuthenticationService.logout();
-		};
-		
-	});
+    var onHomeSuccess = function(data, status, headers, config) {
+	FlashService.clear();
+	movies = data.movies;
+    };
+
+    var onHomeError = function() {
+	alert('home error!');
+    };
+    
+
+    $scope.logout = function() {
+	AuthenticationService.logout();
+    };
+    
+});

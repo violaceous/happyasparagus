@@ -1,4 +1,4 @@
-var app = angular.module('baseprojectApp', [
+var app = angular.module('happyasparagusApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
@@ -71,7 +71,6 @@ app.factory("FlashService", function($rootScope) {
       $rootScope.flash = message;
     },
     clear: function() {
-		alert('FlashService.clear');
       $rootScope.flash = "";
     }
   };
@@ -140,12 +139,18 @@ app.factory("AuthenticationService", function($http, $sanitize, SessionService, 
   };
 });
 
-app.factory("UserService", function($scope) {
-	$scope.id = ""
-	
-	var id = function() {
-		return $scope.id;
+app.factory("UserService", function() {
+    var id = '14';
+
+    return {
+	getId: function() {
+	    return this.id;
+	},
+
+	setId: function(id) {
+	    this.id = id;
 	}
+    };
 });
 
 

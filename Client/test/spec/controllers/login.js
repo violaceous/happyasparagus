@@ -3,7 +3,7 @@ describe('LoginController', function(){
     var scope, $httpBackend;//we'll use these in our tests
  
     //mock Application to allow us to inject our own dependencies
-    beforeEach(module('baseprojectApp'));
+    beforeEach(module('happyasparagusApp'));
     
     //mock the controller for the same reason and include $rootScope and $controller
     beforeEach(inject(function($rootScope, $controller, _$httpBackend_){

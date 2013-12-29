@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('baseprojectApp')
+angular.module('happyasparagusApp')
 	.controller("RegisterController", function($scope, $location, RegisterService) {
 		$scope.user = { first: "", last: "", email: "", password: "" };
 

@@ -1,5 +1,5 @@
 {
-  "name": "baseproject",
+  "name": "happyasparagus",
   "version": "0.0.0",
   "dependencies": {
     "angular": "~1.2.0-rc.3",
