@@ -1,3 +1,5 @@
-Client/node_modules/**/*
+Client/app/bower_components/**/*
 Client/.sass-cache/**/*
 Client/.tmp/**/*
+
+*~
