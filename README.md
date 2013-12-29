@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $2
 ===========
 
@@ -10,3 +11,9 @@ run setup.sh with two parameters: the first is the name of the project and the s
 from the Client directory run npm install
 
 from the Client directory run bower install
+=======
+happyasparagus
+==============
+
+Grocery shopping website
+>>>>>>> c7fa8fbd8637f740c3d8b6084c1df3c93c2bd92f
