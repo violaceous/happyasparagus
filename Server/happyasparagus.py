@@ -63,6 +63,9 @@ def requires_auth(f):
 def create_user(email, password, first, last):
 	cur.execute("INSERT INTO happyasparagus.user (email, password, first, last) VALUES (%s, %s, %s, %s)", (email, password, first, last))
 
+def create_purchase(ingredient, amount, purchased, lasts, expires, userid):
+	cur.execute("INSERT INTO purchase")
+
 
 @app.route('/')
 def hello_world():
@@ -97,9 +100,25 @@ def user():
 	last = request.json.get('last')	
 	return register(first, last, email, password)
 
+@app.route("/purchase", methods=["GET", "POST"])
+def purchase():
+	purchase = request.json.get('purchase')
+	userid = request.json.get('userid')
+	
+	data = {}
+	data['message'] = "login okay."	
+	response = jsonify(data)
+	response.status_code = 200
+	return response
+
+
 @app.route("/purchases", methods=["GET", "POST"])
 def purchases():
-	return request.json.get('id')
+	data = {}
+	data['message'] = "login okay."	
+	response = jsonify(data)
+	response.status_code = 200
+	return response
 
 	
 """ sample with auth

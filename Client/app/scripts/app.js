@@ -144,11 +144,11 @@ app.factory("UserService", function() {
 
     return {
 	getId: function() {
-	    return this.id;
+	    return id;
 	},
 
-	setId: function(id) {
-	    this.id = id;
+	setId: function(newId) {
+	    id = newId;
 	}
     };
 });
