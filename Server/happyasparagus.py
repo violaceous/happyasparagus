@@ -6,9 +6,13 @@ from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 import logging
 import MySQLdb
+import keyring
+
 app = Flask(__name__)
 
-db = MySQLdb.connect(host="localhost", user="root", passwd="one4all", db="happyasparagus")
+
+password = keyring.get_password('happyasparagus','violaceous')
+db = MySQLdb.connect(host="localhost", user="root", passwd=password, db="happyasparagus")
 cur = db.cursor()
 
 def check_auth(email, password):
